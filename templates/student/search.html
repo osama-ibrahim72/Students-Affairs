@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <link rel="stylesheet" href="{%static 'css/search.css' %}">
+</head>
+
+<body>
+    <form method="POST" >
+        {% csrf_token %}
+        <input type="search" resulte="5" autosave="some_unique_value" placeholder="Search with name" name="s"  />
+        <div class="bottonDIV" style="text-align: center;width: 100%;">
+            <button type="submit"  >search</button>
+        </div>
+    </form>
+    <div style="width: 100%;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>GPA</th>
+                    <th>Dept.</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   
+                    <form method="GET" action = 'http://127.0.0.1:8000/profile/{{stu.sid}}/'>
+                    
+                    <td><button value="{{stu.name}}" id = "{{stu.sid}}" name ="{{stu.sid}}" href='http://127.0.0.1:8000/profile/{{stu.sid}}' type = submit method="GET">{{stu}}</button></td>
+                    </form>
+                    <td>{{stu.gpa}}</td>
+                    <td>{{stu.depart}}</td>
+                    <td>{{stu.Status}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+{% endblock contant %}

@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Add</title>
+  <link rel="stylesheet" href="{% static 'css/add.css'%}">
+</head>
+
+<body>
+  <br /><br />
+  <form method="post">
+    {% csrf_token %}
+    <label for="ID">ID</label>
+    <input id="ID"  name = "id" type="number" placeholder="ID" autofocus />
+    <br /><br />
+    <label for="name">Name</label>
+    <input id = "name" name = "name" type="text" placeholder="Name" />
+    <br /><br />
+    <label for="date">Date of birth</label>
+    <input id="date" name = "date" type="date" placeholder="Date of birth"  />
+    <br /><br />
+    <label for="gpa">GPA</label>
+    <input id="gpa" name="gpa" type="float" placeholder="GPA" />
+    <br /><br />
+    <label for="level">Level</label>
+    <input id="level" name="lvl" type="number" placeholder="Level" min="1" max="4"  />
+    <br /><br />
+    <label for="status">Status</label>
+    <select name="status" >
+      <option value="active">Active</option>
+      <option value="non-active">Non-active</option>
+    </select>
+    <br /><br />
+    <label for="depart">Department</label>
+    <select id = "department" name="department">
+      <option value = "Genral" selected >General</option>
+      <option value = "cs">CS</option>
+      <option value = "IT">IT</option>
+      <option value = "ai">AI</option>
+      <option value = "is">IS</option>
+    </select>
+    <br /><br />
+    <label for="email">Email</label>
+    <input id="email" name = "email" type = "email" placeholder="Email" />
+    <br /><br />
+    <label for="number">Mobile number</label>
+    <input id="mobile" name ="mobile" type="number" placeholder="Mobile number" />
+    <br /><br />
+    <div id = "sub-btns">
+      <input type="submit" value="Save" />
+      <input type="reset" />
+    </div>
+  </form>
+  <!-- go to profile page -->
+  <a  href="http://127.0.0.1:8000/view/1/"><img id = "back-btn" src="{% static 'imgs/left-arrow.png'%}"></a>
+  <script src="{% static 'js/add3.js'%}"></script>
+</body>
+
+</html>
+{% endblock contant %}

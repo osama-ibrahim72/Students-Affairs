@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Faculty of computer and artifical intelligence cairo university (FCAI) student affairs websit</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="student affairs websit" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+    <div id="center">
+        <div>
+            
+            <a href='http://127.0.0.1:8000/view/1/'><img class="button" src="{% static 'imgs/view.png' %}" alt=""></a>
+            
+            
+            <a href="{%url 'search'%}"> <img class="button" src="{% static 'imgs/search.png' %}" alt="search page image"></a>
+        </div>
+        
+        <div>
+            <a href="{%url 'add'%}"><img class="button" src="{% static 'imgs/add.png' %}" alt="add page image" ></a>
+            
+            <a href="{%url 'dep'%}"><img class="button" src="{% static 'imgs/department.png' %}" alt="department page image"></a>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <a href="mailto:jojo1gogo2345@gmail.com" style="margin-left: 10px;text-decoration: none;color: black;">
+            Content Us
+        </a>
+    </div>
+</body>
+
+
+</html>
+{% endblock contant %}

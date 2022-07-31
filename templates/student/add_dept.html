@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/add_dept.css' %}">
+</head>
+<body>
+    <div class="infoFDIV">
+        <div>
+            <h2>informations</h2>
+        </div>
+        <div class="infoI">
+            {{student.name}}
+        </div>
+        <div class="infoI">
+            {{student.sid}}
+        </div>
+        <div class="infoI">
+            {{student.gpa}}
+        </div>
+    </div>
+    <div class="infoLDIV">
+        <div>
+            <h2>Avilable department</h2>
+        </div>
+        <div class="infoI">
+            cs
+        </div>
+        <div class="infoI">
+            it
+        </div>
+        <div class="infoI">
+            is
+        </div>
+        <div class="infoI">
+            ai
+        </div>
+    </div>
+    <div style="width: 100%;text-align: center;">
+        <form method="post">
+        <label>choose your department</label>
+        {% csrf_token %}
+        <input id='department' type='department' name = "department" />
+        <!-- <select name="department" required style="background-color: #bbb;color: black;border: 2px solid black;padding: 0;
+        border-radius: 5px;">
+            <option value="Genral"> </option>
+            <option value="cs">CS</option>
+            <option value="IT">IT</option>
+            <option value="ai">AI</option>
+            <option value="is">IS</option>
+        </select> -->
+        <div id = "sub-btns">
+            <input type="submit" value="Save" />
+          </div>
+        </form>
+    </div>
+    <!-- to profile page -->
+    <a href="http://127.0.0.1:8000/profile/{{student.sid}}/"><img src="{%static 'imgs/left-arrow.png'%}"
+            style="width: 3%;height: 3%;margin-left: 2%;margin-top: 5%;"></a>
+</body>
+</html>
+{% endblock contant %}

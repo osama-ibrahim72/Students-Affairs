@@ -1,0 +1,59 @@
+body {
+    background-image: url('../imgs/background.jpeg');
+    background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        height: 100%;
+}
+
+select {
+    background-color: #bbb;
+    color: black;
+    border: 2px solid black;
+    padding: 0;
+    border-radius: 5px;
+}
+
+table {
+    text-align: center;
+    width: 92%;
+    margin-left: 4%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+thead {
+    background-image: url('imgs/Rectangle 1.png');
+    opacity: 0.8;
+}
+
+th,
+td {
+    border-bottom: 1px solid #bbb;
+    padding: 10px;
+}
+
+tbody tr:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+td a {
+    text-decoration: none;
+    color: black
+}
+
+.selectDIV {
+    margin: 2%;
+}
+
+.selectDIV input {
+    background-color: #bbb;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: black;
+    padding: 6px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 15px;
+}

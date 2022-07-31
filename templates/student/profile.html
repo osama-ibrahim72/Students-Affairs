@@ -1,0 +1,78 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/profile2.css' %}">
+</head>
+
+<body>
+    <div class="imgDIV">
+        <img src="{%static 'imgs/programmer.png' %}" alt="student dp"
+            style="width: 20%;height: 20%;margin-left: 40%; margin-top: 2%;">
+        
+    </div>
+    <div class="info">
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{student.name}}</td>
+            </tr>
+            <tr>
+                <th>Student ID</th>
+                <td>{{student.sid}}</td>
+            </tr>
+            <tr>
+                <th>Student gpa</th>
+                <td>{{student.gpa}}</td>
+            </tr>
+            <tr>
+                <th>Student level</th>
+                <td>{{student.lvl}}</td>
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td>{{student.depart}}</td>
+            </tr>
+    
+            <tr>
+                <th>phone</th>
+                <td>{{student.mobileNum}}</td>
+            </tr>
+           
+            
+        </table>
+    </div>
+    <div style="text-align: center;width: 100%;"  >
+       
+            <form method="GET" action = 'http://127.0.0.1:8000/add_dept/{{student.sid}}/' class="form">         
+                <button value="{{student.name}}" id = "{{student.sid}}" name ="{{student.sid}}" href='http://127.0.0.1:8000/add_dept/{{student.sid}}/' type = submit method="GET">add department</button>
+            </form>
+       
+       
+        
+        <form method="GET" action = 'http://127.0.0.1:8000/grades/{{student.sid}}/' class="form">         
+            <button clss="btn" value="{{student.name}}" id = "{{student.sid}}" name ="{{student.sid}}" href='http://127.0.0.1:8000/grades/{{student.sid}}/' type = submit method="GET">grades</button>
+        </form>
+      
+        
+        <form method="GET" action = 'http://127.0.0.1:8000/update/{{student.sid}}/' class="fprm">         
+            <button clss="btn" value="{{student.name}}" id = "{{student.sid}}" name ="{{student.sid}}" href='http://127.0.0.1:8000/update/{{student.sid}}/' type = submit method="GET">update</button>
+        </form>
+      
+        
+        <form method="GET" action = 'http://127.0.0.1:8000/delete/{{student.sid}}/' class="form">         
+            <button clss="btn" value="{{student.name}}" id = "{{student.sid}}" name ="{{student.sid}}" href='http://127.0.0.1:8000/delete/{{student.sid}}/' type = submit method="GET">delete</button>
+        </form>
+        
+      
+
+    </div>
+
+
+</body>
+
+</html>
+{% endblock contant %}

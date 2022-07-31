@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="{% static 'css/dep.css' %}">
+  <link rel="stylesheet" href="{% static 'css/search.css' %}">
+</head>
+
+<body>
+  <form method="POST" >
+    {% csrf_token %}
+    <input type="search" resulte="5" autosave="some_unique_value" placeholder="Search with Department" name="s"  />
+    <div class="bottonDIV" style="text-align: center;width: 100%;">
+        <button type="submit"  >search</button>
+    </div>
+  </form>
+
+  <div class="selectDIV">
+    <strong>Order by</strong>
+    <form action="" style="display:inline;">
+      <input type="button" value="ID">
+    </form>
+    <form action="" style="display:inline;">
+      <input type="button" value="GPA">
+    </form>
+  </div>
+  <div style="width: 100%;text-align: center;margin-top: 2%;margin-bottom: 2%;">
+    <strong>Students</strong>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>GPA</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for i in stu%}
+      <tr>
+        <td>{{i.sid}}</td>
+        <td>{{i.name}}</td>
+        <td> {{i.gpa}}</td>
+      </tr>
+      {% endfor%}
+    </tbody>
+  </table>
+
+</body>
+
+</html>
+{% endblock contant %}

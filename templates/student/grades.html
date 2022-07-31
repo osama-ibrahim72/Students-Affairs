@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="{%static 'css/grades.css' %}">
+</head>
+
+<body>
+   <table>
+      <thead>
+         <tr>
+            <th>Course Name</th>
+            <th>Course ID</th>
+            <th>Grade</th>
+         </tr>
+      </thead>
+      <tbody>
+         {% for i in coo %}
+         <tr>
+            <td>{{i}}</td>
+            <td> {{i.cid}}</td>
+            <td>{{i.grade}}</td>
+         </tr>
+         {% endfor %}
+      </tbody>
+   </table>
+   <br></br>
+
+</body>
+
+</html>
+{% endblock contant %}

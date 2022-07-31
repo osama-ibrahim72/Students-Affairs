@@ -1,0 +1,37 @@
+body {
+    background-image: url('../imgs/background.jpeg');
+
+}
+
+#header1 {
+    border: 8px solid blue;
+    background-color: aqua;
+    width: 300px;
+    margin-top: 70px;
+    margin-left: 36%;
+    padding: 20px 20px 20px 20px;
+}
+#header2 {
+    border: 8px solid violet;
+    background-color: lightgray;
+    width: 300px;
+    margin-top: 70px;
+    margin-left: 36%;
+    padding: 20px 20px 20px 20px;
+}
+#header3 {
+    border: 8px solid green;
+    background-color:greenyellow;
+    width: 300px;
+    margin-top: 70px;
+    margin-left: 36%;
+    padding: 20px 20px 20px 20px
+}
+#header4 {
+    border: 8px solid darkred;
+    background-color: tomato;
+    width: 300px;
+    margin-top: 70px;
+    margin-left: 36%;
+    padding: 20px 20px 20px 20px;
+}

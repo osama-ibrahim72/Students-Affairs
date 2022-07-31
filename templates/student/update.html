@@ -1,0 +1,70 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update</title>
+  
+  <link rel="stylesheet" href="{% static 'css/update.css' %}">
+</head>
+
+<body>
+  <br /><br />
+  <form method="post">
+    {% csrf_token %}
+    <label for="ID">ID</label>
+    <input id="ID" type="number" value="{{student.sid}}" autofocus disabled  name = "id"/>
+    <br /><br />
+    <label for="name">Name</label>
+    <input id = "name" type="text" value="{{student.name}}" name ="name" />
+    <br /><br />
+    <label for="date">Date of birth</label>
+    <input id="date" type="date" value="{{student.dateOfBirth}}" name = "date" />
+    <br /><br />
+    <label for="gpa">GPA</label>
+    <input id="gpa" type="number" value="{{student.gpa}}" name="gpa" />
+    <br /><br />
+    <label for="level">Level</label>
+    <input id="level" type="number" value="{{student.lvl}}" min="1" max="4"  name="lvl" />
+    <br /><br />
+    <label for="status">Status</label>
+    <select name="status" >
+      <option value="active">Active</option>
+      <option value="non-active">Non-active</option>
+    </select>
+    <br /><br />
+    <label for="depart">Department</label>
+    <input id="depart" list="department" name="Depart" disabled>
+    <datalist id="department">
+      <option value="CS">
+      <option value="IS">
+      <option value="AI">
+      <option value="DS">
+      <option value="IT">
+      <option value="General">
+    </datalist>
+    <br /><br />
+    <label for="email">Email</label>
+    <input id="email" type = "email" value="{{student.email}}"  name = "email"/>
+    <br /><br />
+    <label for="number">Mobile number</label>
+    <input id="mobile" type="number" value="{{student.mobileNum}}" name ="mobile" />
+    <br /><br />
+    <div id = "sub-btns">
+      <input type="submit" value="Save" />
+      <input type="reset" />
+    </div>
+  </form>
+  
+  <a href='http://127.0.0.1:8000/profile/{{student.sid}}/'><img id = "back-btn" src="{% static 'imgs/left-arrow.png' %}"
+    ></a>
+    <script src="{% static 'js/add3.js' %}"></script>
+</body>
+
+</html>
+{% endblock contant %}

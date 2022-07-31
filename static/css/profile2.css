@@ -1,0 +1,65 @@
+body {
+    background-image: url('../imgs/background.jpeg');
+    background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        height: 100%;
+}
+
+table {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    border-collapse: collapse;
+    border: 1px dashed #bbb;
+}
+
+th {
+    width: 33%;
+    border-right: 1px solid #bbb;
+    padding: 10px;
+}
+
+td {
+    width: 67%;
+}
+
+tr:hover th,
+tr:hover td {
+    background-color: #ccc;
+}
+
+.bottonDIV input {
+    background-color: #bbb;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: black;
+    padding: 6px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 15px;
+}
+
+#bottonSET {
+    display: inline-block;
+    background-color: #bbb;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: black;
+    padding: 6px 10px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px black;
+}
+.div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    margin: 10px 20px 15px 12px;
+    color: darkred;
+    position: absolute;
+    
+}

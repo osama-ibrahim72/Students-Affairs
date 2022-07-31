@@ -1,0 +1,86 @@
+{% extends 'base.html'%}
+{% block contant %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view</title>
+    <link rel="stylesheet" href="{%static 'css/view.css' %}">
+</head>
+
+<body>
+    <form id="levelFORM">
+        <div>
+        <label for="levels">Choose a level:</label><br>
+        <!-- <select name="levels" id="lvlID"> -->
+            <!-- <option value="lvl 1" id ="lvl1"> -->
+                <form method="GET" action = 'http://127.0.0.1:8000/view/1/'>
+                    
+                    <button value="1" id = "1" name ="1" href='http://127.0.0.1:8000/view/1/' type = submit method="GET">level 1</button>
+                </form>
+            <!-- </option> -->
+            <!-- <option value="lvl 2" id ="lvl2"> -->
+                
+                <form method="GET" action = 'http://127.0.0.1:8000/view/2/'>
+                    
+                    <button value="2" id = "2" name ="2" href='http://127.0.0.1:8000/view/2/' type = submit method="GET">level 2</button>
+                </form>
+            <!-- </option>
+            <option value="lvl 3" id ="lvl3"> -->
+                
+                <form method="GET" action = 'http://127.0.0.1:8000/view/3/'>
+                    
+                    <button value="3" id = "3" name ="3" href='http://127.0.0.1:8000/view/3/' type = submit method="GET">level 3</button>
+                </form>
+            <!-- </option>
+            <option value="lvl 4"  id ="lvl4"> -->
+                
+                <form method="GET" action = 'http://127.0.0.1:8000/view/4/'>
+                    
+                    <button   value="4" id = "4" name ="4" href='http://127.0.0.1:8000/view/4/' type = submit method="GET">level 4</button>
+                </form>
+            <!-- </option>
+        </select> -->
+        <br><br>
+        <!-- <input type="submit" value="view students"> -->
+        </div>
+    </form>
+    <div style="width: 100%;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>GPA</th>
+                    <th>Dept.</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in student %}
+                <tr>
+                    <!-- to profile page -->
+                    <form method="GET" action = 'http://127.0.0.1:8000/profile/{{i.sid}}/'>
+                    
+                    <td><button value="{{i.name}}" id = "{{i.sid}}" name ="{{i.sid}}" href='http://127.0.0.1:8000/profile/{{i.sid}}' type = submit method="GET">{{i}}</button></td>
+                    </form>
+                    <td>{{i.gpa}}</td>
+                    <td>{{i.depart}}</td>
+                    <td>{{i.Status}} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        
+    </script>
+    
+
+</body>
+
+</html>
+{% endblock contant %}

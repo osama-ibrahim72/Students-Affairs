@@ -1,0 +1,68 @@
+body {
+    background-image: url('../imgs/background.jpeg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#levelFORM {
+    background-image: url(imgs/Rectangle\ 1.png);
+    opacity: 0.7;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin-left: 450px;
+    margin-right: 450px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+input[type=submit] {
+    background-color: black;
+    opacity: 0.8;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+select {
+    background-color: #bbb;
+    color: black;
+    border: 2px solid black;
+    padding: 0;
+    border-radius: 5px;
+}
+
+table {
+    text-align: center;
+    width: 92%;
+    margin-left: 4%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+thead {
+    background-image: url('imgs/Rectangle 1.png');
+    opacity: 0.8;
+}
+
+th,
+td {
+    border-bottom: 1px solid #bbb;
+    padding: 10px;
+}
+
+tbody tr:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+td a {
+    text-decoration: none;
+    color: black
+}

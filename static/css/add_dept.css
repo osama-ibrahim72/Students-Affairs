@@ -1,0 +1,50 @@
+body {
+    background-image: url('../imgs/background.jpeg');
+    background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        height: 100%;
+}
+
+.infoFDIV {
+    background-color: #ccc;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    list-style-type: none;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 0px;
+    margin-top: 3%;
+    padding: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.infoLDIV {
+    background-color: #ccc;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    list-style-type: none;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 3%;
+    margin-top: 0px;
+    padding: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.infoI {
+    display: inline-flex;
+    flex-wrap: wrap;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
